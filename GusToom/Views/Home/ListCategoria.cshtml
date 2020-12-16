@@ -1,0 +1,71 @@
+@model IEnumerable<GusToom.Models.Categoriamanga>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="enl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/site.css">
+	<link rel="ico" href="../img/Logo.png">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet1"> 
+	<title>ガスToom</title>
+</head>
+
+<body>
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo">ガスToom</h2>
+			<nav>
+                <a class="activo" asp-action="Index">Inicio</a>
+                <a class="link" asp-action="ListMangas">Mangas</a>
+                <a class="link" asp-action="ListCategoria">Generos</a>
+                <a class="link" asp-action="MangaAdd">Publicar</a>
+                <a class="link" asp-action="">Proximamente</a>
+                <a class="link" asp-action="">Autores</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="Menu-principal-del-usuario">
+		<div class="contenedor">
+        <div>
+          <p class="descripcion">
+			<tbody>
+				<table>
+				  <thead>
+                    <tr>
+                        <th>Generos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                     @foreach (GusToom.Models.Categoriamanga categoriamanga in Model)
+                         {
+                            <tr>
+                              <td>@categoriamanga.nombre</td>
+                            </tr>
+							<td>
+								<a asp-controller="Home" asp-action="Modificar">Modificar</a>
+							</td>
+                         }    
+                  </tbody>
+
+				</table>
+           </tbody>
+				</p>
+				<p>
+					  <a role="button" class="boton" asp-action="MangaAdd"><i class="fas fa-coffee"></i>ガスPublicar Manga </a>
+				    <a role="button" class="boton" asp-action="Categoriaadd"><i class="fas fa-book-reader"></i>Agregar Genero</a>
+				</p>
+              <table class="table table-bordered table-hover table-sm">
+        </div>
+		</div>
+		</div>
+	</main>
+	
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

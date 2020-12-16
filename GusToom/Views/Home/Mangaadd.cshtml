@@ -1,0 +1,103 @@
+@model GusToom.Models.Manga
+@{
+    Layout = null;
+    var categoriasdemangas = ViewBag.categoriasdemangas;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/sitelist.css">
+	<link rel="ico" href="../img/Logo.png">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	<title>ガスToom</title>
+</head>
+
+<body>
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo">ガスToom</h2>
+			<nav>
+                <a class="activo" asp-action="Index">Inicio</a>
+                <a class="link" asp-action="ListMangas">Mangas</a>
+                <a class="link" asp-action="ListCategoria">Generos</a>
+                <a class="link" asp-action="MangaAdd">Publicar</a>
+                <a class="link" asp-action="">Proximamente</a>
+                <a class="link" asp-action="">Autores</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="Menu-principal-del-usuario">
+		<div class="contenedor">
+        <div>
+          <p class="descripcion">
+		      
+          	<tbody>
+              <body>
+    <div class="container-fluid col-md-7">
+    <form asp-action="Mangaadd" method="post">
+         <div class="form-group">
+           <label asp-for="nombre" for="examp">Titulo</label>
+           <input asp-for="nombre" type="name" class="form-control"  placeholder="Nombre" required/>
+         </div>
+         <div class="clas-form">
+           <label asp-for="categoriamanga.nombre" for="FormControlSelect">Genero</label>
+           <select asp-for="categoriamanga.nombre" multiple class="form-control"  required>
+             @foreach (var categoriamanga in categoriasdemangas)
+             {
+                 <option>@categoriamanga.nombre</option>
+             }
+           </select>
+         </div>
+         <div>
+           <label asp-for="autor" for=examp>Autor</label>
+           <input asp-for="autor" type="name" class="form-control"  placeholder="Autor" required/>
+         </div>
+         <div>
+           <label asp-for="volumenes" for="examp">Volumenes</label>
+           <input asp-for="volumenes" type="number" placeholder="Volumenes" class="form-control"  required />
+         </div>
+         <div>
+           <label asp-for="puntuacion" for="examp">Puntuacion</label>
+           <input asp-for="puntuacion" type="number" placeholder="Puntuacion" class="form-control" required>
+         </div>
+         <div>
+           <label asp-for="fechaemitido" for="examp">Fecha de Comienzo de emision</label>
+           <input asp-for="fechaemitido" type="date" placeholder="Puntuacion" class="form-control"  required>
+         </div>
+         <div>
+           <label asp-for="preciopromedio" for="examp">Precio Promedio</label>
+           <input asp-for="preciopromedio" type="number" placeholder="Puntuacion" class="form-control"  required>
+         </div>
+         <div>
+           <label asp-for="link" for="examp">Link de Referencia</label>
+           <input asp-for="link" type="url" placeholder="link" class="form-control"  required>
+         </div>
+         
+         <button type="submit" class="btn btn-success">Agregar Manga</button>
+    </form>
+    </div>
+</body>
+                
+            </tbody>
+				</p>
+				<p>
+					  <a role="button" class="boton" asp-action="MangaAdd"><i class="fas fa-coffee"></i>ガスPublicar Manga </a>
+				    <a role="button" class="boton" asp-action="Categoriaadd"><i class="fas fa-book-reader"></i>Agregar Genero</a>
+				</p>
+              <table class="table table-bordered table-hover table-sm">
+
+
+        </div>
+		</div>
+		</div>
+	</main>
+	
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
+

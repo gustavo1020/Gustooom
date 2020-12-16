@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<body>
+    <table class="table table-bordered table-hover table-sm">
+        <tbody>
+                <tr>
+                  <th scope="col">Manga</th>
+                  <th scope="col">Genero</th>
+                  <th scope="col">Volumenes</th>
+                  <th scope="col">Puntuacion</th>
+                  <th scope="col">Autor</th>
+                  <th scope="col">Precio AVG</th>
+                  <th scope="col">Fecha de emision</th>
+                  <th scope="col">Link del Manga</th>
+                </tr>
+                 
+            @foreach (GusToom.Models.Manga manga in Model)
+                {
+                  <tr>
+                    <th>@manga.nombre</th>
+                    <td>@manga.categoriamanga.nombre</td>
+                    <td>@manga.volumenes</td>
+                    <td>@manga.puntuacion</td>
+                    <th>@manga.autor</th>
+                    <td>@manga.preciopromedio</td>
+                    <td>@manga.fechaemitido</td>
+                    <td>@manga.link</td>
+                  </tr>
+                }    
+        </tbody>
+    </table>
+</body>
