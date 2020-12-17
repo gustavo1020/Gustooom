@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\keiliv375\\Documents\\GusToom\\GusToom.csproj",
+      "projectUniqueName": "C:\\Users\\keiliv375\\Documents\\GitHub\\Gustooom\\GusToom\\GusToom.csproj",
       "projectName": "GusToom",
-      "projectPath": "C:\\Users\\keiliv375\\Documents\\GusToom\\GusToom.csproj",
+      "projectPath": "C:\\Users\\keiliv375\\Documents\\GitHub\\Gustooom\\GusToom\\GusToom.csproj",
       "packagesPath": "C:\\Users\\keiliv375\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\keiliv375\\Documents\\GusToom\\obj\\",
+      "outputPath": "C:\\Users\\keiliv375\\Documents\\GitHub\\Gustooom\\GusToom\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\keiliv375\\AppData\\Roaming\\NuGet\\NuGet.Config"
