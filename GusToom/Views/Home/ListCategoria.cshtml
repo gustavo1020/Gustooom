@@ -44,11 +44,14 @@
                      @foreach (GusToom.Models.Categoriamanga categoriamanga in Model)
                          {
                             <tr>
-                              <td>@categoriamanga.nombre</td>
+                              <td>
+								  @categoriamanga.nombre
+							  </td>
+							  <td>
+								  <a asp-controller="Home" asp-action="Modificar">Modificar</a>
+							  </td>
                             </tr>
-							<td>
-								<a asp-controller="Home" asp-action="Modificar">Modificar</a>
-							</td>
+							
                          }    
                   </tbody>
 
