@@ -1,16 +1,17 @@
 @model IEnumerable<GusToom.Models.Categoriamanga>
 @{
-    Layout = null;
+	Layout = null;
 }
 <!DOCTYPE html>
 <html lang="enl">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/css/site.css">
-	<link rel="ico" href="../img/Logo.png">
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet1"> 
-	<title>ガスToom</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="/css/xx.css">
+ <link rel="ico" href="../img/Logo.png">
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+ <title>ガスToom</title>
 </head>
 
 <body>
@@ -18,57 +19,50 @@
 		<div class="contenedor">
 			<h2 class="logotipo">ガスToom</h2>
 			<nav>
-                <a class="link" asp-action="Index">Inicio</a>
+                <a class="activo" asp-action="Index">Inicio</a>
                 <a class="link" asp-action="ListMangas">Mangas</a>
-                <a class="activo" asp-action="ListCategoria">Generos</a>
+                <a class="link" asp-action="ListCategoria">Generos</a>
                 <a class="link" asp-action="MangaAdd">Publicar</a>
-                <a class="link" asp-action="">Proximamente</a>
+                <a class="link" asp-action="home">Proximamente</a>
                 <a class="link" asp-action="">Autores</a>
 			</nav>
 		</div>
 	</header>
+<div class="Menu-principal-del-usuario">
+	 <div id="main-container">
+  <table class="table table-striped" id="tabla" name="tabla">
+   <thead>
+	<tr class="titulo">
+	 <th>Generos</th>
+	</tr>
+   </thead>
+   @foreach (GusToom.Models.Categoriamanga categoriamanga in Model)
+			{
+	   <tr>
+		<td colspan="1" style=""> 
+			@categoriamanga.nombre 
+		</td>
+		<td colspan="2" style="text-align: right;">
+			<a href="#" class="btn btn-red">Eliminar</a>
+			<a href="#" class="btn btn-green">Editar</a>
+		</td>
+	   </tr>
 
-	<main>
-		<div class="Menu-principal-del-usuario">
-		<div class="contenedor">
-        <div>
-          <p class="descripcion">
-			<tbody>
-				<table>
-				  <thead>
-                    <tr>
-                        <th>Generos</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                     @foreach (GusToom.Models.Categoriamanga categoriamanga in Model)
-                         {
-                            <tr>
-                              <td>
-								  @categoriamanga.nombre
-							  </td>
-							  <td>
-								  <a asp-controller="Home" asp-action="Modificar">Modificar</a>
-							  </td>
-                            </tr>
-							
-                         }    
-                  </tbody>
+			}
+			
 
-				</table>
-           </tbody>
-				</p>
-				<p>
-					  <a role="button" class="boton" asp-action="MangaAdd"><i class="fas fa-coffee"></i>ガスPublicar Manga </a>
-				    <a role="button" class="boton" asp-action="Categoriaadd"><i class="fas fa-book-reader"></i>Agregar Genero</a>
-				</p>
-              <table class="table table-bordered table-hover table-sm">
-        </div>
-		</div>
-		</div>
-	</main>
-	
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>
+  </table>
+      <p class="botx table-striped" id="botx" name="botx">
+		<a role="button" class="boton" asp-action="MangaAdd"><i class="fas fa-coffee"></i>>ガスPublicar Manga</a>	
+	  </p>
+	  <p class="bot table-striped" id="bot" name="bot">
+		  <a role="button" class="boton" asp-action="ListMangas"><i class="fas fa-book-reader"> </i>Ver Mangas</a>
+	  </p>
+ </div>
+</div>
+
+ <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+ <script src="js/main.js"></script>
 </body>
+
 </html>

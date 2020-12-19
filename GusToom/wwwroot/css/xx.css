@@ -1,0 +1,158 @@
+﻿
+#main-container{
+	margin: 100px center;
+	width: 600px;
+
+}
+.Menu-principal-del-usuario .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.Menu-principal-del-usuario .boton:hover {
+	background: #fff;
+	color: #000;
+}
+
+.Menu-principal-del-usuario .boton i {
+	margin-right: 1.25em;
+}
+.Menu-principal-del-usuario {
+	font-size: 16px;
+	min-height: 35.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/img1.jpg);
+
+}
+
+.table{
+	background-color: rebeccapurple;
+	border-collapse: collapse;
+	position: absolute;
+	left: 55%;
+	margin-left: -400px;
+	top: 50%;
+	margin-top: -180px;
+	width: 50%;
+}
+th, td{
+	padding: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+thead{
+	background-color: rgb(107, 107, 107);
+	border-bottom: solid 10px  rgb(107, 107, 107);
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td{
+	background-color: rgb(136, 65, 136);
+	color: white;
+}
+.btn{
+	border-radius: 3px;
+	display: inline-block;
+	padding: 8px 10px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.3); 
+}
+.btn-green{
+	color: white;
+	background-color: #3cc4c9;
+	text-align: left;
+}
+.btn-green:hover{
+	background-color: #37B839;	
+}
+.btn-green:active{
+	background-color: #29962A;
+}
+
+.btn-red{
+	color: black;
+	background-color: #fcfcfc;
+}
+.btn-red:hover{
+	background-color: #C43535;	
+}
+.btn-red:active{
+	background-color: #A62828;
+}
+:root {
+	--violeta: #b60982bb;
+	--fondo: #000000;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--violeta);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+.botx{
+	position: absolute;
+	left: 80%;
+	margin-left: -50px;
+	top: 10%;
+	margin-top: 100px;
+	width: 50%;
+}
+.bot{
+	position: absolute;
+	left: 80%;
+	margin-left: -50px;
+	top: 25%;
+	margin-top: 100px;
+	width: 50%;
+}
