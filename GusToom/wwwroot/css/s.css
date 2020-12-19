@@ -132,6 +132,49 @@ tr:hover td{
 	margin-right: 1.25em;
 }
 
+.form-control{
+	border: solid 1px #ccc;
+	padding: 10px;
+}
+form{
+	background-color: purple;
+	border-radius: 5px;
+	color: #999;
+	font-size: 1.0em;
+	padding: 25px;
+	margin: 0 auto;
+	margin-top: -250px;
+	width: 300px;
+}
+.striped{
+	position: absolute;
+	left: 50%;
+	margin-left: -300px;
+	top: 50%;
+	margin-top: 40px;
+	width: 50%;
+}
+.btn{
+	border-radius: 3px;
+	display: inline-block;
+	padding: 8px 10px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.3); 
+	margin-left: 67px;
+	margin-top: 15px;
+}
+.btn-green{
+	color: white;
+	background-color: #17a7ac;
+	text-align: left;
+}
+.btn-green:hover{
+	background-color: #37B839;	
+}
+.btn-green:active{
+	background-color: #29962A;
+}
 /* ---- ----- ----- Media Queries ----- ----- ----- */
 @media screen and (max-width: 800px) {
 	header .logotipo {
@@ -151,4 +194,5 @@ tr:hover td{
 	.Menu-principal-del-usuario .descripcion {
 		max-width: 100%;
 	}
+
 }

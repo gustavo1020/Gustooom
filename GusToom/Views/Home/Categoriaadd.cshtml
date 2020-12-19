@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/css/site.css">
+	<link rel="stylesheet" href="/css/s.css">
 	<link rel="ico" href="../img/Logo.png">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
 	<title>ガスToom</title>
@@ -22,7 +22,7 @@
                 <a class="link" asp-action="ListMangas">Mangas</a>
                 <a class="link" asp-action="ListCategoria">Generos</a>
                 <a class="link" asp-action="MangaAdd">Publicar</a>
-                <a class="link" asp-action="">Proximamente</a>
+                <a class="link" asp-action="">Estados</a>
                 <a class="link" asp-action="">Autores</a>
 			</nav>
 		</div>
@@ -34,13 +34,13 @@
               <div class="container-fluid col-md-7">
     <form asp-action="Categoriaadd" method="post">
   <div class="form-group">
-    <label asp-for="nombre">Nombre</label>
+    <label asp-for="nombre">Categoria</label>
     <input asp-for="nombre" type="name" class="form-control" placeholder="Nombre" required/>
   </div>
-  <button type="submit" class="btn btn-success">Añadir Categoria</button>
+  <button type="submit" class="btn btn-green">Añadir Categoria</button>
 </form>
 				</p>
-				<p>
+				<p class="striped" id="striped" name="striped">
 					  <a role="button" class="boton" asp-action="MangaAdd"><i class="fas fa-coffee"></i>ガスPublicar Manga </a>
 				    <a role="button" class="boton" asp-action="Categoriaadd"><i class="fas fa-book-reader"></i>Agregar Genero</a>
 				</p>
