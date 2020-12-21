@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/css/s.css">
+	<link rel="stylesheet" href="/css/tr.css">
 	<link rel="ico" href="../img/Logo.png">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
 	<title>ガスToom</title>
@@ -31,7 +31,7 @@
 
 	<main>
 		<div class="Menu-principal-del-usuario">
-		<div class="contenedor">
+		<div class="contenedorx">
         <div>
           <p class="descripcion">
 		      
@@ -40,12 +40,12 @@
     <div class="container-fluid col-md-7">
     <form asp-action="Mangaadd" method="post">
          <div class="form-group">
-           <label asp-for="nombre" for="examp">Titulo</label>
+           <p><label asp-for="nombre" for="examp">Titulo</label></p>
            <input asp-for="nombre" type="name" class="form-control"  placeholder="Nombre" required/>
          </div>
          <div class="clas-form">
-           <label asp-for="categoriamanga.nombre" for="FormControlSelect">Genero</label>
-           <select asp-for="categoriamanga.nombre" multiple class="form-control"  required>
+           <p><label asp-for="categoriamanga.nombre" for="FormControlSelect">Genero</label></p>
+           <select asp-for="categoriamanga.nombre" multiple class="form-control"required>
              @foreach (var categoriamanga in categoriasdemangas)
              {
                  <option>@categoriamanga.nombre</option>
@@ -53,44 +53,43 @@
            </select>
          </div>
          <div>
-           <label asp-for="autor" for=examp>Autor</label>
-           <input asp-for="autor" type="name" class="form-control"  placeholder="Autor" required/>
+           <p><label asp-for="autor" for=examp>Autor</label></p>
+           <input asp-for="autor" type="name" placeholder="Autor" class="form-control" required>
          </div>
          <div>
            <label asp-for="volumenes" for="examp">Volumenes</label>
-           <input asp-for="volumenes" type="number" placeholder="Volumenes" class="form-control"  required />
+           <input asp-for="volumenes" type="number" placeholder="Volumenes" class="form-control"  required/>
          </div>
          <div>
            <label asp-for="puntuacion" for="examp">Puntuacion</label>
-           <input asp-for="puntuacion" type="number" placeholder="Puntuacion" class="form-control" required>
+           <input asp-for="puntuacion" type="number" placeholder="Puntuacion" class="form-control" required/>
          </div>
          <div>
            <label asp-for="fechaemitido" for="examp">Fecha de Comienzo de emision</label>
-           <input asp-for="fechaemitido" type="date" placeholder="Puntuacion" class="form-control"  required>
+           <input asp-for="fechaemitido" type="date" placeholder="Fecha" class="form-control"  required/>
          </div>
          <div>
            <label asp-for="preciopromedio" for="examp">Precio Promedio</label>
-           <input asp-for="preciopromedio" type="number" placeholder="Puntuacion" class="form-control"  required>
+           <input asp-for="preciopromedio" type="number" placeholder="Precio" class="form-control"  required/>
          </div>
          <div>
            <label asp-for="link" for="examp">Link de Referencia</label>
-           <input asp-for="link" type="url" placeholder="link" class="form-control"  required>
+           <input asp-for="link" type="url" placeholder="link" class="form-control"  required/>
          </div>
          
-         <button type="submit" class="btn btn-success">Agregar Manga</button>
+         <button type="submit" class="btn btn-green">Agregar Manga</button>
     </form>
     </div>
 </body>
                 
             </tbody>
 				</p>
-				<p>
-					  <a role="button" class="boton" asp-action="MangaAdd"><i class="fas fa-coffee"></i>ガスPublicar Manga </a>
-				    <a role="button" class="boton" asp-action="Categoriaadd"><i class="fas fa-book-reader"></i>Agregar Genero</a>
+				<p class="botx table-striped" id="botx" name="botx">
+					  <a role="button" class="boton" asp-action="ListMangas"><i class="fas fa-coffee"></i>Mangas </a>
 				</p>
-              <table class="table table-bordered table-hover table-sm">
-
-
+        <p class="boc table-striped" id="boc" name="boc">
+          <a role="button" class="boton" asp-action="Categoriaadd"><i class="fas fa-book-reader"></i>Agregar Genero</a>
+        </p>
         </div>
 		</div>
 		</div>

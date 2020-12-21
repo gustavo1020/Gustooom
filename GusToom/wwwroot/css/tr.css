@@ -15,16 +15,20 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.contenedor {
+.contenedorx {
 	width: 90%;
 	border-collapse: collapse;
 	position: absolute;
 	left: 55%;
 	margin-left: -400px;
 	top: 50%;
-	margin-top: -180px;
+	margin-top: 40px;
 	width: 50%;
 	
+}
+.contenedor {
+	width: 90%;
+	margin: auto;
 }
 
 header {
@@ -97,11 +101,11 @@ header nav a.activo {
 	background-color: rebeccapurple;
 	border-collapse: collapse;
 	position: absolute;
-	left: 55%;
+	left: 40%;
 	margin-left: -400px;
-	top: 50%;
+	top: 56%;
 	margin-top: -180px;
-	width: 50%;
+	width: 80%;
 }
 
 th, td{
@@ -158,9 +162,24 @@ form{
 	margin-top: -250px;
 	width: 300px;
 }
+.botx{
+	position: absolute;
+	left: -47%;
+	top: -60%;
+}
+.boc{
+	position: absolute;
+	left: -47%;
+	top: -40%;
+}
+.box{
+	position: absolute;
+	left: 30%;
+	top: 21%;
+}
 .striped{
 	position: absolute;
-	left: 50%;
+	left: 55%;
 	margin-left: -300px;
 	top: 50%;
 	margin-top: 40px;

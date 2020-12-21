@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/css/s.css">
+	<link rel="stylesheet" href="/css/tr.css">
 	<link rel="ico" href="../img/Logo.png">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
 	<title>ガスToom</title>
@@ -53,20 +53,18 @@
                     <td>@manga.nombre</td>
                     <td>@manga.categoriamanga.nombre</td>
                     <td>@manga.volumenes</td>
-                    <td>@manga.puntuacion</td>
+                    <td>°@manga.puntuacion</td>
                     <td>@manga.autor</td>
-                    <td>@manga.preciopromedio</td>
+                    <td>$@manga.preciopromedio</td>
                     <td>@manga.fechaemitido</td>
                     <td>@manga.link</td>
                   </tr>
                 }    
             </table>
-				<p>
+				<p class="box table-striped" id="box" name="box">
 					  <a role="button" class="boton" asp-action="MangaAdd"><i class="fas fa-coffee"></i>ガスPublicar Manga </a>
 				    <a role="button" class="boton" asp-action="Categoriaadd"><i class="fas fa-book-reader"></i>Agregar Genero</a>
 				</p>
-              <table class="table table-bordered table-hover table-sm">
-
 
         </div>
 			</div>
