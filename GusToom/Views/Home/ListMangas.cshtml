@@ -33,9 +33,8 @@
 		<div class="Menu-principal-del-usuario">
 			<div class="contenedor">
         <div>
-          <p class="descripcion">
-            <table>
-              <tbody>
+            <table class="tablata tableta-striped" id="tablata" name="tablata">
+              <thead>
                 <tr>
                   <th scope="col">Manga</th>
                   <th scope="col">Genero</th>
@@ -46,24 +45,22 @@
                   <th scope="col">Fecha de emision</th>
                   <th scope="col">Link del Manga</th>
                 </tr>
+              </thead>
                  
             @foreach (GusToom.Models.Manga manga in Model)
                 {
                   <tr>
-                    <th>@manga.nombre</th>
+                    <td>@manga.nombre</td>
                     <td>@manga.categoriamanga.nombre</td>
                     <td>@manga.volumenes</td>
                     <td>@manga.puntuacion</td>
-                    <th>@manga.autor</th>
+                    <td>@manga.autor</td>
                     <td>@manga.preciopromedio</td>
                     <td>@manga.fechaemitido</td>
                     <td>@manga.link</td>
                   </tr>
                 }    
-            </tbody>
-
             </table>
-				</p>
 				<p>
 					  <a role="button" class="boton" asp-action="MangaAdd"><i class="fas fa-coffee"></i>ガスPublicar Manga </a>
 				    <a role="button" class="boton" asp-action="Categoriaadd"><i class="fas fa-book-reader"></i>Agregar Genero</a>

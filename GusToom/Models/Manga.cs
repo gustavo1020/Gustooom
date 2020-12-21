@@ -32,6 +32,7 @@ namespace GusToom.Models
         {
             puntuacion = score;
             Scores.Add(new ScoredeManga(score));
+            
         }
 
 
